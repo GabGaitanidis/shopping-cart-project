@@ -1,0 +1,91 @@
+.sidebar {
+  position: relative;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  padding: 60px 10px;
+  overflow-x: hidden;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  min-height: 800px;
+  background-color: #13161a;
+  box-shadow: 3px 0px 10px #13161a;
+
+  color: white;
+}
+
+.sidebar.open {
+  left: 0;
+}
+h4 {
+  text-align: center;
+}
+.links:hover {
+  background-color: #333;
+}
+.sidebar .links {
+  display: block;
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: left;
+  border: none;
+  color: white;
+}
+.sidebar button {
+  margin: 10px 0px;
+  font-size: 17px;
+  border-radius: 20px;
+  text-align: left;
+  border: none;
+}
+.links:hover,
+.sidebar button:hover {
+  background-color: #3a3a3d;
+}
+.toggleBtn {
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  padding: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+.toggleBtnDiv {
+  position: absolute;
+  top: 13px;
+  left: 67%;
+}
+.toggleBtnClose {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 230px;
+  color: white;
+}
+p {
+  font-size: 25px;
+}
+@media (max-width: 600px) {
+  .sidebar {
+    position: fixed;
+    left: -270px;
+    border-radius: 10px;
+    top: 0;
+  }
+
+  .toggleBtn {
+    display: block;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+  .links {
+    width: 100%;
+  }
+}
